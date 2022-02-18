@@ -16,8 +16,9 @@ fn nth_prime_number(n: usize, sieve_size: usize) -> usize {
     primes[n - 1]
 }
 
-fn sieve_of_eratosthenes(size: usize) -> Vec<usize> {
+pub fn sieve_of_eratosthenes(size: usize) -> Vec<usize> {
     // See https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Pseudocode
+    let mut result: Vec<usize> = Vec::new();
     let mut primes: Vec<bool> = vec! [true; size];
     primes[0] = false;
     primes[1] = false;
@@ -29,7 +30,6 @@ fn sieve_of_eratosthenes(size: usize) -> Vec<usize> {
             }
         }
     }
-    let mut result: Vec<usize> = Vec::new();
     for (index, &p) in primes.iter().enumerate() {
         if p {
             result.push(index);
