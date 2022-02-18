@@ -8,7 +8,7 @@ const LIMIT: u64 = 1_000;
 
 pub fn solve() {
     let result: u64 = sum_multiples(3) + sum_multiples(5) - sum_multiples(15);
-    println!("    The answer for n = {} is {}", LIMIT, result);
+    println!("The answer for n = {} is {}", LIMIT, result);
 }
 
 fn sum_multiples(step: usize) -> u64 {
