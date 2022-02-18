@@ -9,7 +9,7 @@ mod problem_003;
 mod problem_004;
 mod problem_005;
 mod problem_006;
-
+mod problem_007;
 mod utils;
 
 fn main() {
@@ -46,7 +46,7 @@ fn solve_problem(problem_nr: i32, problems: &HashMap<i32, fn()-> ()>) {
 	let now: Instant = Instant::now();
 	problems[&problem_nr]();
 	let duration: Duration = now.elapsed();
-	println!("Time in milliseconds: {}", duration.as_secs_f64() * 1000 as f64);
+	println!("Time in milliseconds: {:>6.2}", duration.as_secs_f64() * 1000 as f64);
 }
 
 fn init_problems_map() -> HashMap<i32, fn()> {
@@ -57,5 +57,6 @@ fn init_problems_map() -> HashMap<i32, fn()> {
 	result.insert(4, problem_004::solve);
 	result.insert(5, problem_005::solve);
 	result.insert(6, problem_006::solve);
+	result.insert(7, problem_007::solve);
 	result
 }
