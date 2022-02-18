@@ -6,6 +6,7 @@ use itertools::sorted;
 mod problem_001;
 mod problem_002;
 mod problem_003;
+mod problem_004;
 
 fn main() {
 	/*
@@ -49,5 +50,6 @@ fn init_problems_map() -> HashMap<i32, fn()> {
 	result.insert(1, problem_001::solve);
 	result.insert(2, problem_002::solve);
 	result.insert(3, problem_003::solve);
+	result.insert(4, problem_004::solve);
 	result
 }

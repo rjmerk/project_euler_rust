@@ -33,6 +33,6 @@ mod tests {
     #[test]
     fn check_if_example_works() {
         let actual: Vec<u64> = prime_factors(13195);
-        assert_eq!(actual, vec![5, 7, 13, 30]);
+        assert_eq!(actual, vec![5, 7, 13, 29]);
     }
 }
