@@ -13,6 +13,7 @@ mod problem_007;
 mod problem_008;
 mod problem_009;
 mod problem_010;
+mod problem_011;
 mod utils;
 
 fn main() {
@@ -64,5 +65,6 @@ fn init_problems_map() -> HashMap<i32, fn()> {
 	result.insert(8, problem_008::solve);
 	result.insert(9, problem_009::solve);
 	result.insert(10, problem_010::solve);
+	result.insert(11, problem_011::solve_011);
 	result
 }
