@@ -106,7 +106,7 @@ const NUMBERS_STRING: &str = "
 53503534226472524250874054075591789781264330331690";
 
 
-pub fn solve_013() {
+pub fn solve() {
     let sum: f64 = NUMBERS_STRING
         .lines()
         .map(|line| line.parse::<f64>().unwrap_or(0.0))

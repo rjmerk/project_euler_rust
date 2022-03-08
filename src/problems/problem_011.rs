@@ -61,7 +61,7 @@ struct Slice {
     n: usize,
 }
 
-pub fn solve_011() {
+pub fn solve() {
     let n = 4;
     let result = greatest_product_adjacent_numbers(n);
     println!(

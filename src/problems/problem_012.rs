@@ -19,7 +19,7 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred
 divisors?
  */
-pub fn solve_012() {
+pub fn solve() {
     let n: u64 = 500;
     println!(
         "The first triangle number with over {} divisors is {}",

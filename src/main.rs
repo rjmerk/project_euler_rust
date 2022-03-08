@@ -3,20 +3,10 @@ use std::time::{Instant, Duration};
 use std::collections::HashMap;
 use itertools::sorted;
 
-mod problem_001;
-mod problem_002;
-mod problem_003;
-mod problem_004;
-mod problem_005;
-mod problem_006;
-mod problem_007;
-mod problem_008;
-mod problem_009;
-mod problem_010;
-mod problem_011;
-mod problem_012;
-mod problem_013;
+mod problems;
 mod utils;
+
+use problems::init_problems_map;
 
 fn main() {
 	/*
@@ -55,20 +45,3 @@ fn solve_problem(problem_nr: i32, problems: &HashMap<i32, fn()-> ()>) {
 	println!("Time in milliseconds: {:>6.2}", duration.as_secs_f64() * 1000 as f64);
 }
 
-fn init_problems_map() -> HashMap<i32, fn()> {
-	let mut result: HashMap<i32, fn() -> ()> = HashMap::new();
-	result.insert(1, problem_001::solve);
-	result.insert(2, problem_002::solve);
-	result.insert(3, problem_003::solve);
-	result.insert(4, problem_004::solve);
-	result.insert(5, problem_005::solve);
-	result.insert(6, problem_006::solve);
-	result.insert(7, problem_007::solve);
-	result.insert(8, problem_008::solve);
-	result.insert(9, problem_009::solve);
-	result.insert(10, problem_010::solve);
-	result.insert(11, problem_011::solve_011);
-	result.insert(12, problem_012::solve_012);
-	result.insert(13, problem_013::solve_013);
-	result
-}
