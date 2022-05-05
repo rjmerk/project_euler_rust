@@ -1,17 +1,7 @@
-mod problem_001;
-mod problem_002;
-mod problem_003;
-mod problem_004;
-mod problem_005;
-mod problem_006;
-mod problem_007;
-mod problem_008;
-mod problem_009;
-mod problem_010;
-mod problem_011;
-mod problem_012;
-mod problem_013;
-mod problem_014;
+mod problem_001; mod problem_002; mod problem_003; mod problem_004;
+mod problem_005; mod problem_006; mod problem_007; mod problem_008;
+mod problem_009; mod problem_010; mod problem_011; mod problem_012;
+mod problem_013; mod problem_014; mod problem_014_b; mod problem_015;
 
 use std::collections::HashMap;
 
@@ -31,6 +21,7 @@ pub fn init_problems_map() -> HashMap<i32, fn()> {
     result.insert(12, problem_012::solve);
     result.insert(13, problem_013::solve);
     result.insert(14, problem_014::solve);
-
+    result.insert(9914, problem_014_b::solve);
+    result.insert(15, problem_015::solve);
     result
 }
